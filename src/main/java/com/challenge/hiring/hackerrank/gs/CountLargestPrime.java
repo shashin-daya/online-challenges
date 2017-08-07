@@ -1,4 +1,4 @@
-package com.hackerrank.challenge.hiring.gs;
+package com.challenge.hiring.hackerrank.gs;
 
 import java.util.HashMap;
 import java.util.Map;

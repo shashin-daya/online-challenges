@@ -1,4 +1,4 @@
-package com.hackerearth.challenge.hiring.payu;
+package com.challenge.hiring.hackerearth.payu;
 
 import java.io.BufferedReader;
 import java.io.IOException;
