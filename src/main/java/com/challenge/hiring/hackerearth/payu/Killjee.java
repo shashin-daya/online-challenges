@@ -11,26 +11,21 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /*
  * Killjee and subsets
- * Killjee is playing with an array a
- * , which has n
+ * Killjee is playing with an array a, which has n
  * integers. He is trying to encrypt this array as a single integer.
- * Let l
- * be the largest number in array a. Then, the code for array a is ∑lj=0bj∗31j mod 109+7
- * .
- * Here, bj
- * is the size of largest subset of array a whose XOR is equal to j.If there exist no subset of array a whose XOR is j
+ * Let l be the largest number in array a. Then, the code for array a is ∑j=0 to l=bj∗31j mod (10POW9+7)
+ * Here, bj is the size of largest subset of array a whose XOR is equal to j.If there exist no subset of array a whose
+ * XOR is j
  * then bj=0
  * .
  * INPUT CONSTRAINTS:
  * 1≤n≤104
  * 1≤ai≤103
  * INPUT FORMAT :
- * First line of input contains a single integer n
- * . Next line contains n space separated integers, elements of array a
- * .
+ * First line of input contains a single integer n.
+ * Next line contains n space separated integers, elements of array a.
  * OUTPUT FORMAT :
  * Print a single integer code of the array a
- * .
  * Sample Input
  * 4
  * 1 2 3 4
@@ -39,18 +34,13 @@ import java.util.concurrent.ConcurrentHashMap;
  * Explanation
  * Here, b[0]=3
  * as the subset (1,2,3) has xor value equal to 0
+ * b[1]=2, as the subset (2,3) has xor value equal to 1
+ * b[2]= 2, as the subset (1,3) has xor value equal to 2
+ * b[3]=2, as the subset (1,2) has xor value equal to 3
+ * b[4]= 4, as the subset (1,2,3,4) has xor value equal to 0
  * .
- * b[1]
- * =2, as the subset (2,3) has xor value equal to 1
- * b[2]
- * = 2, as the subset (1,3) has xor value equal to 2
- * b[3]
- * =2, as the subset (1,2) has xor value equal to 3
- * b[4]
- * = 4, as the subset (1,2,3,4) has xor value equal to 0
- * .
- * Thus, the answer = (b[0]×310)+(b[1]×311)+(b[2]×312)+(b[3]×313)+(b[4]×314)
- * Modulo 109+7 = 3755653
+ * Thus, the answer = (b[0]×31POW0)+(b[1]×31POW1)+(b[2]×31POW2)+(b[3]×31POW3)+(b[4]×31POW4)
+ * Modulo 10POW9+7 = 3755653
  * .
  * Note: Your code should be able to convert the sample input into the sample output. However, this is not enough to
  * pass the challenge, because the code will be run on multiple test cases. Therefore, your code must solve this problem
